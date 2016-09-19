@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Goal - Query the database to get price and shares outstanding for every day there is a price. There is a price for every date but not a shares outstanding for every date. Use the most recent shares available if none exists in the db for that day.
 
-Things you may want to cover:
+** Table structure **
 
-* Ruby version
+** Price table **
 
-* System dependencies
+** ID | Date | Ticker | Price **
 
-* Configuration
+** Shares table **
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+** ID | Date | Ticker | Shares outstanding **
