@@ -2,6 +2,8 @@
 
 ### Goal - Query the database to get price and shares outstanding for every day there is a price. There is a price for every date but not a shares outstanding for every date. Use the most recent shares available if none exists in the db for that day. Information, table structure, and a short demo are below.
 
+![wisdomtree_demo](https://cloud.githubusercontent.com/assets/17169813/18648530/10457f5e-7e89-11e6-9774-51f42dbc36e5.gif)
+
 **Info:**
 * the method that runs the query is in App/Models/Price file
 * dates for the preceding 12 months
@@ -26,5 +28,3 @@ GROUP BY prices.date
 **Price table: ID | Date | Ticker | Price**
 
 **Shares table: ID | Date | Ticker | Shares outstanding**
-
-![wisdomtree_demo](https://cloud.githubusercontent.com/assets/17169813/18648305/1335e11e-7e88-11e6-8099-a96a4cafce48.gif)3e3b0b8705b33d6db2
