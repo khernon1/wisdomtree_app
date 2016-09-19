@@ -26,3 +26,5 @@ GROUP BY prices.date
 **Price table: ID | Date | Ticker | Price**
 
 **Shares table: ID | Date | Ticker | Shares outstanding**
+
+![wisdomtree_demo](https://cloud.githubusercontent.com/assets/17169813/18648305/1335e11e-7e88-11e6-8099-a96a4cafce48.gif)3e3b0b8705b33d6db2
