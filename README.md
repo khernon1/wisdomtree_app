@@ -1,13 +1,28 @@
 # README
 
-### Goal - Query the database to get price and shares outstanding for every day there is a price. There is a price for every date but not a shares outstanding for every date. Use the most recent shares available if none exists in the db for that day.
+### Goal - Query the database to get price and shares outstanding for every day there is a price. There is a price for every date but not a shares outstanding for every date. Use the most recent shares available if none exists in the db for that day. Information, table structure, and a short demo are below.
 
-** Table structure **
+**Info:**
+* dates for the preceding 12 months
+* dummy, randomized data for prices, shares, and ticker
+* shares outstanding are randomly updated every 20-30 days
+* only one security used as example but query would work for any number
 
-** Price table **
+```
+SELECT prices.date, prices.ticker, prices.price,
+CASE WHEN prices.date >= shares.date 
+  THEN shares.shares                  
+  END AS Shares_OS
+FROM prices
+JOIN shares 
+WHERE prices.ticker = shares.ticker            
+AND Shares_OS IS NOT NULL
+GROUP BY prices.date
+```
 
-** ID | Date | Ticker | Price **
+**Table structure**
 
-** Shares table **
+**Price table: ID | Date | Ticker | Price**
 
-** ID | Date | Ticker | Shares outstanding **
+**Shares table: ID | Date | Ticker | Shares outstanding**
+
