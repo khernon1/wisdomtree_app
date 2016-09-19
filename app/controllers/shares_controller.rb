@@ -1,6 +1,6 @@
 class SharesController < ApplicationController
 
-  def index
+  def index    
     render :json => Share.all
   end
 
